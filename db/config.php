@@ -1,8 +1,8 @@
 <?php
 // Database configuration
 $db_host = 'localhost';    // Usually 'localhost'
-$db_user = 'db-admin';    // Replace with your database username
-$db_pass = 'kvW6qhMQ70e)';    // Replace with your database password
+$db_user = 'root';    // Replace with your database username
+$db_pass = '';    // Replace with your database password
 $db_name = 'auto_dialer';      // Replace with your database name
 
 // Create a connection to the database
