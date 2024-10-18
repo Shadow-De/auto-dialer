@@ -2,12 +2,26 @@
 session_start();
 include_once 'db/config.php'; // Ensure this path is correct
 
+// Enable error reporting for debugging
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = trim($_POST['username']);
     $password = trim($_POST['password']);
 
+    // Check if the connection to the database is established
+    if (!$conn) {
+        die("Database connection failed: " . $conn->connect_error);
+    }
+
     // Prepare and execute the statement to find the user
     $stmt = $conn->prepare("SELECT * FROM normal_users WHERE username = ?");
+    if (!$stmt) {
+        die("Prepare failed: " . $conn->error); // Display error if preparation fails
+    }
+
     $stmt->bind_param("s", $username);
     $stmt->execute();
     $result = $stmt->get_result();
