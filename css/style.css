@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
@@ -182,3 +183,189 @@ tbody tr:hover {
         padding: 8px; /* Less padding for table cells */
     }
 }
+=======
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* Container Styles */
+.container {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    height: 100vh; /* Full height */
+    position: fixed; /* Fixed position */
+    overflow-y: auto; /* Allow scrolling */
+    transition: width 0.3s; /* Smooth transition for resizing */
+    margin-bottom: 20px; /* Add bottom margin for spacing */
+}
+
+.sidebar h2 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 15px 0;
+}
+
+.sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 4px; /* Rounded corners */
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #444; /* Darker background on hover */
+}
+
+/* Main Content Styles */
+.main-content {
+    margin-left: 270px; /* Adjust for gap */
+    padding: 20px;
+    width: calc(100% - 270px); /* Adjust for gap */
+    background-color: #f4f4f4; /* Light background for main content */
+    min-height: 100vh; /* Ensure it covers the full height */
+    transition: margin-left 0.3s, width 0.3s; /* Smooth transition for resizing */
+}
+
+/* Header Styles */
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* Card Styles */
+.card {
+    background-color: #fff; /* White background for cards */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styles */
+form {
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Button Styles */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Alert Styles */
+.alert {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.alert.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.alert.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Table Row Hover Effects */
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* Full width on smaller screens */
+        position: relative; /* Relative position */
+        height: auto; /* Auto height */
+        transition: none; /* No transition for smaller screens */
+    }
+    
+    .main-content {
+        margin-left: 0; /* No margin on smaller screens */
+        width: 100%; /* Full width */
+        padding-top: 20px; /* Add top padding for spacing */
+    }
+    
+    /* Adjust card and table styles for better spacing on small screens */
+    .card {
+        padding: 15px; /* Less padding for smaller screens */
+    }
+
+    table {
+        font-size: 14px; /* Slightly smaller text for tables */
+    }
+
+    th, td {
+        padding: 8px; /* Less padding for table cells */
+    }
+}
+>>>>>>> b04dae7a9d44575933dc0c0f6ef591db89fab706
